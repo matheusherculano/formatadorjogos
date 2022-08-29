@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Formatação de jogos</h1>
+
+  <p><label for="w3review">Dados Brutos:</label></p>
+  <textarea id="dadosBrutos" name="dadosBrutos" rows="10" cols="200">Cole aqui os dados brutos</textarea>
+  <br>
+  <button onclick="formatar()">Formatar</button>
+  <br>
+  <br>
+  <br>
+  <p><label for="w3review">Formatado:</label></p>
+  <div id="dadosFormatados" name="dadosFormatados" rows="20" cols="200"></div>
+  <br>
+
+
+<script>
+    function formatar() {
+      var dados = "";
+      //dados = document.getElementById("dadosBrutos").value.match(/.{1,2}/g).join(" ");
+      //document.getElementById("dadosFormatados").innerText = dados.split();
+
+      dados = document.getElementById("dadosBrutos").value.match(/.{1,2}/g).join(" ").match(/.{1,45}/g).join("</br>");
+      document.getElementById("dadosFormatados").innerHTML = dados;
+      
+    }
+    </script>
+
+</body>
+</html>
