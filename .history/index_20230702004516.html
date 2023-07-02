@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Formatação de jogos</h1>
+
+  <p><label for="w3review">Dados Brutos:</label></p>
+  Quantia de dezenas: <input id="dezenas" type="number">
+  <br>
+  <br>
+  <textarea id="dadosBrutos" name="dadosBrutos" rows="10" cols="200">Cole aqui os dados brutos</textarea>
+  <br>
+  <button onclick="formatar()">Formatar</button>
+  <br>
+  <br>
+  <br>
+  <p><label for="w3review">Formatado:</label></p>
+  <div id="dadosFormatados" name="dadosFormatados" rows="20" cols="200"></div>
+  <br>
+
+
+<script>
+  document.getElementById("dezenas").value = 10;
+  function formatar() {
+      var dados = "";
+      var dezenas = document.getElementById("dezenas").value;
+      var dezenasFormatadas = dezenas *3;
+      let regex = new RegExp(".{1,"+dezenasFormatadas+"}", 'g');
+      console.log(regex);
+      
+      dados = document.getElementById("dadosBrutos").value.match(/.{1,2}/g).join(" ").match(regex).join("</br>");
+      document.getElementById("dadosFormatados").innerHTML = dados;
+      
+    }
+    </script>
+
+</body>
+</html>

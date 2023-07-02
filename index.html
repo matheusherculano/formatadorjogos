@@ -3,30 +3,30 @@
 
 <body>
 
-  <h1>detetive</h1>
+  <h1>detetive 1.1</h1>
 
-  <button onclick="formatar('matheus')">Matheus</button>
+  <button onclick="formatar('matheus')" id="matheus1">Matheus</button>
   <input type="text" id="matheus" class="geral">
   <br><br><br><br>
-  <button onclick="formatar('elaine')">Elaine</button>
+  <button onclick="formatar('elaine')" id="elaine1">Elaine</button>
   <input type="text" id="elaine" class="geral">
   <br><br><br><br>
-  <button onclick="formatar('julia')">Julia</button>
+  <button onclick="formatar('julia')" id="julia1">Julia</button>
   <input type="text" id="julia" class="geral">
   <br><br><br><br>
-  <button onclick="formatar('thai')">Thai</button>
+  <button onclick="formatar('thai')" id="thai1">Thai</button>
   <input type="text" id="thai" class="geral">
   <br><br><br><br>
-  <button onclick="formatar('gabi')">Gabi</button>
+  <button onclick="formatar('gabi')" id="gabi1">Gabi</button>
   <input type="text" id="gabi" class="geral">
   <br><br><br><br>
-  <button onclick="formatar('digs')">Digs</button>
+  <button onclick="formatar('digs')" id="digs1">Digs</button>
   <input type="text" id="digs" class="geral">
   <br><br><br><br>
-  <button onclick="formatar('lay')">Lay</button>
+  <button onclick="formatar('lay')" id="lay1">Lay</button>
   <input type="text" id="lay" class="geral">
   <br><br><br><br>
-  <button onclick="formatar('fabrini')">Fabrini</button>
+  <button onclick="formatar('fabrini')" id="fabrini1">Fabrini</button>
   <input type="text" id="fabrini" class="geral">
   <br><br>
 
@@ -42,7 +42,8 @@
 
       setTimeout(function(){
         document.getElementById(pessoa).value = "Já viu!"
-      }, 2000)
+        document.getElementById(pessoa+"1").setAttribute('disabled', '')
+      }, 1500)
     }
 
     function rand(min, max) { 

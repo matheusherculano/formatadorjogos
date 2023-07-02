@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h1>detetive</h1>
+
+  <button id="matheus" onclick="formatar('matheus')">Matheus</button>
+  <input type="text" id="matheus" class="geral">
+  <button onclick="limpar('matheus')">limpar</button>
+  <br><br><br><br>
+  <button onclick="formatar('elaine')">Elaine</button>
+  <input type="text" id="elaine" class="geral">
+  <button onclick="limpar('elaine')">limpar</button>
+  <br><br><br><br>
+  <button onclick="formatar('julia')">Julia</button>
+  <input type="text" id="julia" class="geral">
+  <button onclick="limpar('julia')">limpar</button>
+  <br><br><br><br>
+  <button onclick="formatar('thai')">Thai</button>
+  <input type="text" id="thai" class="geral">
+  <button onclick="limpar('thai')">limpar</button>
+  <br><br><br><br>
+  <button onclick="formatar('gabi')">Gabi</button>
+  <input type="text" id="gabi" class="geral">
+  <button onclick="limpar('gabi')">limpar</button>
+  <br><br><br><br>
+  <button onclick="formatar('digs')">Digs</button>
+  <input type="text" id="digs" class="geral">
+  <button onclick="limpar('digs')">limpar</button>
+  <br><br><br><br>
+  <button onclick="formatar('lay')">Lay</button>
+  <input type="text" id="lay" class="geral">
+  <button onclick="limpar('lay')">limpar</button>
+  <br><br><br><br>
+  <button onclick="formatar('fabrini')">Fabrini</button>
+  <input type="text" id="fabrini" class="geral">
+  <button onclick="limpar('fabrini')">limpar</button>
+  <br><br><br><br>
+
+  <script>
+    var opts = ['','detetive', 'anjo', 'killer', 'vitima1', 'vitima2', 'vitima3', 'vitima4', 'vitima5']
+    var max = 8;
+    function formatar(pessoa) {
+      var numAleatorio = rand(1, max);
+      max--;
+
+      document.getElementById(pessoa).value = opts[numAleatorio];
+      opts.splice(opts.indexOf(opts[numAleatorio]), 1);
+    }
+
+    function limpar(pessoa){
+      document.getElementById(pessoa).value = "Já viu!";
+      var btn_acao = document.getElementById(pessoa);
+      btn_acao.setAttribute('disabled', '');
+    }
+
+    function rand(min, max) { 
+      return Math.floor(Math.random() * (max - min + 1) + min)
+    }
+  </script>
+
+</body>
+
+</html>
